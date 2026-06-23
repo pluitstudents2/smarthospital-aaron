@@ -60,7 +60,7 @@ DEPT_INFO = {
     },
     'Cardiology': {
         'icon':'❤️','color':'#dc2626','bg':'#fee2e2','border':'#fca5a5',
-        'desc':'CODENO34',
+        'desc':'Specialises in heart and cardiovascular conditions.',
         'next':['Visit Level 3, Wing A','Estimated wait: 20–30 min','Bring any previous ECG reports']
     },
     'Gastroenterology': {
@@ -206,12 +206,12 @@ with st.form("triage_form"):
     # Section 5 — Patient Info
     st.markdown("""
     <!-- COLOR6 -->
-    <div style="background:#f60909;border:1px solid #cbdc0d;border-radius:14px;
+    <div style="background:#4c09f6;border:1px solid #2c0ddc;border-radius:14px;
                 padding:20px 24px;margin-bottom:20px;">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
             <span style="background:#25f20a;color:white;border-radius:8px;
                          padding:4px 10px;font-size:12px;font-weight:600;">5</span>
-            <span style="font-size:16px;font-weight:600;color:#105efa;">Patient Information</span>
+            <span style="font-size:16px;font-weight:600;color:#f6f6f6;">Patient Information</span>
         </div>
     </div>
     """, unsafe_allow_html=True)
