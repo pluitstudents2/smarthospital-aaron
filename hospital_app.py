@@ -287,7 +287,7 @@ if submitted:
             {steps_html}
             <div style="margin-top:20px;padding:12px 16px;background:rgba(0,0,0,0.05);
                         border-radius:10px;font-size:12px;color:#6b7280;line-height:1.5;">
-                ⚠️ CODENO30
+                ⚠️ This is an AI suggestion, not a medical diagnosis. Please consult a doctor for further evaluation.
             </div>
         </div>
         """, unsafe_allow_html=True)
@@ -296,7 +296,7 @@ if submitted:
         st.markdown(f"""
         <div style="background:white;border:1px solid #e5e7eb;border-radius:16px;padding:24px;">
             <div style="font-size:14px;font-weight:600;color:#111827;margin-bottom:16px;">
-                CODENO31
+                Confidence by department
             </div>
         """, unsafe_allow_html=True)
 
@@ -329,7 +329,7 @@ if submitted:
             <!-- COLOR7 -->
             <div style="margin-top:20px;background:#e90ee9;border:1px solid #ff0505;
                         border-radius:10px;padding:12px 14px;font-size:12px;color:#1af250;">
-                <strong>Model:</strong>CODENO32<br>
+                <strong>Model:</strong>KNN (k=7) · 102,000 patients · 99.5% accuracy<br>
                 <strong>Powered by:</strong> Future Classroom ML
             </div>
         </div>
