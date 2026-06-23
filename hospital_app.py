@@ -75,7 +75,7 @@ DEPT_INFO = {
     },
     'General Medicine': {
         'icon':'🩺','color':'#059669','bg':'#d1fae5','border':'#6ee7b7',
-        'desc':'CODENO37',
+        'desc':'Handles general health concerns and non-specialist conditions.',
         'next':['Visit Level 1, Wing A','Estimated wait: 10–15 min','Registration desk is open 24/7']
     },
     'Dermatology': {
@@ -177,9 +177,9 @@ with st.form("triage_form"):
 
     col_temp, col_hr = st.columns(2)
     with col_temp:
-        temperature_level = st.selectbox("CODENO18", options=list(temp_map.keys()), index=1)
+        temperature_level = st.selectbox("Temperature", options=list(temp_map.keys()), index=1)
     with col_hr:
-        heart_rate_level  = st.selectbox("CODENO19", options=list(hr_map.keys()), index=1)
+        heart_rate_level  = st.selectbox("Heart rate", options=list(hr_map.keys()), index=1)
 
     st.markdown("<br>", unsafe_allow_html=True)
 
@@ -191,15 +191,15 @@ with st.form("triage_form"):
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
             <span style="background:#25f20a;color:white;border-radius:8px;
                          padding:4px 10px;font-size:12px;font-weight:600;">4</span>
-            <span style="font-size:16px;font-weight:600;color:#105efa;">CODENO20</span>
+            <span style="font-size:16px;font-weight:600;color:#105efa;">Do you have any of the following?</span>
         </div>
     </div>
     """, unsafe_allow_html=True)
 
     ch1, ch2, ch3, _ = st.columns(4)
-    with ch1: hypertension  = st.checkbox("🩺 CODENO21")
-    with ch2: heart_disease = st.checkbox("❤️ CODENO22")
-    with ch3: asthma        = st.checkbox("💨 CODENO23")
+    with ch1: hypertension  = st.checkbox("🩺 High Blood Pressure")
+    with ch2: heart_disease = st.checkbox("❤️ Heart Disease")
+    with ch3: asthma        = st.checkbox("💨 Asthma")
 
     st.markdown("<br>", unsafe_allow_html=True)
 
@@ -211,18 +211,18 @@ with st.form("triage_form"):
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
             <span style="background:#25f20a;color:white;border-radius:8px;
                          padding:4px 10px;font-size:12px;font-weight:600;">5</span>
-            <span style="font-size:16px;font-weight:600;color:#105efa;">CODENO24</span>
+            <span style="font-size:16px;font-weight:600;color:#105efa;">Patient Information</span>
         </div>
     </div>
     """, unsafe_allow_html=True)
 
     col_age, col_gen = st.columns(2)
     with col_age:
-        age    = st.number_input("CODENO25", min_value=1, max_value=120, value=35)
+        age    = st.number_input("Age", min_value=1, max_value=120, value=35)
     with col_gen:
-        gender = st.selectbox("CODENO26", options=['Female', 'Male'])
+        gender = st.selectbox("Gender", options=['Female', 'Male'])
 
-    submitted = st.form_submit_button("CODENO27 →")
+    submitted = st.form_submit_button("Get AI Recommendation →")
 
 # ── Result ────────────────────────────────────────────────────────────────────
 if submitted:
@@ -258,8 +258,8 @@ if submitted:
 
     st.markdown("---")
     st.markdown("""
-    <div style="font-size:22px;font-weight:700;color:#111827;margin-bottom:4px;">CODENO28</div>
-    <div style="font-size:14px;color:#6b7280;margin-bottom:1.5rem;">CODENO29</div>
+    <div style="font-size:22px;font-weight:700;color:#111827;margin-bottom:4px;">AI Recommendation</div>
+    <div style="font-size:14px;color:#6b7280;margin-bottom:1.5rem;">Based on the information you provided</div>
     """, unsafe_allow_html=True)
 
     res_col, prob_col = st.columns([3, 2])
